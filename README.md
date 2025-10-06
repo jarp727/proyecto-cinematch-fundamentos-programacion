@@ -1,7 +1,6 @@
           # proyecto-cinematch-fundamentos-programacion
 
                                                                                                                  CINEMATCH
-1. Información General
 Participantes del proyecto:
    1) Daniel Garzon
    2) Nicolas Fayad
@@ -11,7 +10,8 @@ Participantes del proyecto:
 •	Fecha de entrega:
 •	Profesor: Pablo Carreño
 2. Titulo del proyecto
-•         CineMatch
+•                                                                                                                CineMatch
+
 4. Descripción del Proyecto
 Nuestro proyecto se basa en crear un programa que, a través, del análisis de datos, pueda recomendar películas a partir de estos:
 
@@ -23,6 +23,12 @@ General:
 •	Describir el propósito principal del proyecto: El proposito principal es brindar una ayuda eficiente y rapida a esas personas que nunca encuentran peliculas que se acoplen a sus gustos, entonces deciden mejor no ver nada, nuestra aplicacion, busca solucionar ese problema
 Específicos:
 •	Enumerar los objetivos técnicos o de aprendizaje específicos (ej. usar estructuras de datos, aplicar funciones, temas vistos en clase, etc.):
+          
+          Implementar estructuras de datos eficientes (listas, diccionarios, árboles) para almacenar y organizar la información de las películas.
+          
+          Aplicar técnicas de análisis de datos para identificar patrones de preferencia en los usuarios y mejorar la precisión de las recomendaciones.
+
+          Utilizar funciones y modularización para mantener un código limpio, reutilizable y fácil de mantener.
 5. Requisitos
 •	Herramientas y tecnologías utilizadas (Python, librerías, etc.):
 •	Requisitos de instalación o ejecución:
