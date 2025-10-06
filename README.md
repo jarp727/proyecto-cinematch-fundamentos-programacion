@@ -23,12 +23,9 @@ General:
 •	Describir el propósito principal del proyecto: El proposito principal es brindar una ayuda eficiente y rapida a esas personas que nunca encuentran peliculas que se acoplen a sus gustos, entonces deciden mejor no ver nada, nuestra aplicacion, busca solucionar ese problema
 Específicos:
 •	Enumerar los objetivos técnicos o de aprendizaje específicos (ej. usar estructuras de datos, aplicar funciones, temas vistos en clase, etc.):
-          
-          •Implementar estructuras de datos eficientes (listas, diccionarios, árboles) para almacenar y organizar la información de las películas.
-          
-          •Aplicar técnicas de análisis de datos para identificar patrones de preferencia en los usuarios y mejorar la precisión de las recomendaciones.
-
-          •Utilizar funciones y modularización para mantener un código limpio, reutilizable y fácil de mantener.
+Implementar estructuras de datos eficientes (listas, diccionarios, árboles) para almacenar y organizar la información de las películas.
+Aplicar técnicas de análisis de datos para identificar patrones de preferencia en los usuarios y mejorar la precisión de las recomendaciones.
+Utilizar funciones y modularización para mantener un código limpio, reutilizable y fácil de mantener.
 5. Requisitos
 •	Herramientas y tecnologías utilizadas (Python, librerías, etc.):
 •	Requisitos de instalación o ejecución:
