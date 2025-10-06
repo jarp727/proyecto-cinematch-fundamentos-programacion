@@ -24,11 +24,11 @@ General:
 Específicos:
 •	Enumerar los objetivos técnicos o de aprendizaje específicos (ej. usar estructuras de datos, aplicar funciones, temas vistos en clase, etc.):
           
-          Implementar estructuras de datos eficientes (listas, diccionarios, árboles) para almacenar y organizar la información de las películas.
+          •Implementar estructuras de datos eficientes (listas, diccionarios, árboles) para almacenar y organizar la información de las películas.
           
-          Aplicar técnicas de análisis de datos para identificar patrones de preferencia en los usuarios y mejorar la precisión de las recomendaciones.
+          •Aplicar técnicas de análisis de datos para identificar patrones de preferencia en los usuarios y mejorar la precisión de las recomendaciones.
 
-          Utilizar funciones y modularización para mantener un código limpio, reutilizable y fácil de mantener.
+          •Utilizar funciones y modularización para mantener un código limpio, reutilizable y fácil de mantener.
 5. Requisitos
 •	Herramientas y tecnologías utilizadas (Python, librerías, etc.):
 •	Requisitos de instalación o ejecución:
