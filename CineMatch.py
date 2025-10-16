@@ -30,6 +30,8 @@ cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
 # Índice para buscar películas por título en minúsculas
 indices = pd.Series(movies.index, index=movies['title'].str.lower()).drop_duplicates()
 
+
+
 # Buscar coincidencias parciales
 def buscar():
     entrada_texto = entrada.get().lower()
