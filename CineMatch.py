@@ -31,6 +31,7 @@ cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
 indices = pd.Series(movies.index, index=movies['title'].str.lower()).drop_duplicates()
 
 # 🎯 Función de recomendación con calificación
+def get_recommendations(title):
 
 # Buscar coincidencias parciales
 def buscar():
