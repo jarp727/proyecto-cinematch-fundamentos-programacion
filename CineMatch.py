@@ -60,3 +60,19 @@ def buscar():
         else:
             resultado.insert(tk.END, "  No se encontraron recomendaciones.")
         resultado.insert(tk.END, "")  # Espacio entre bloques
+        
+# 🪟 Crear ventana
+ventana = tk.Tk()
+ventana.title("🎬 CineMatch")
+ventana.geometry("600x500")
+
+tk.Label(ventana, text="Digita el nombre de una película:", font=("Arial", 12)).pack(pady=10)
+entrada = tk.Entry(ventana, width=50)
+entrada.pack()
+
+tk.Button(ventana, text="Buscar peliculas similares", command=buscar).pack(pady=10)
+
+resultado = tk.Listbox(ventana, width=70, height=20)
+resultado.pack(pady=10)
+
+ventana.mainloop()
