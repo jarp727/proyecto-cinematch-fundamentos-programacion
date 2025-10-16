@@ -37,6 +37,7 @@ def get_recommendations(title):
         return []
     sim_scores = list(enumerate(cosine_sim[idx]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)[1:6]
+    
         
     
 
