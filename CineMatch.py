@@ -39,10 +39,8 @@ def get_recommendations(title):
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)[1:6]
     movie_indices = [i[0] for i in sim_scores]
     recomendadas = movies.iloc[movie_indices][['title', 'vote_average']]
+    return list(zip(recomendadas['title'], recomendadas['vote_average']))
     
-        
-    
-
 # Buscar coincidencias parciales
 def buscar():
     entrada_texto = entrada.get().lower()
