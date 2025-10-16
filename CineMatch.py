@@ -29,3 +29,23 @@ tfidf_matrix = tfidf.fit_transform(movies['overview'])
 cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
 # Índice para buscar películas por título en minúsculas
 indices = pd.Series(movies.index, index=movies['title'].str.lower()).drop_duplicates()
+
+# Buscar coincidencias parciales
+def buscar():
+    entrada_texto = entrada.get().lower()
+    resultado.delete(0, tk.END)
+
+    coincidencias = movies[movies['title'].str.lower().str.contains(entrada_texto)]
+    if coincidencias.empty:
+        messagebox.showinfo("Sin resultados", f"No se encontraron películas que contengan '{entrada_texto}'.")
+        return
+
+    for titulo in coincidencias['title'].unique():
+        resultado.insert(tk.END, f"🎬 Recomendaciones para: {titulo}")
+        recomendaciones = get_recommendations(titulo)
+        if recomendaciones:
+            for peli, score in recomendaciones:
+                resultado.insert(tk.END, f"  - {peli} (⭐ {score:.1f})")
+        else:
+            resultado.insert(tk.END, "  No se encontraron recomendaciones.")
+        resultado.insert(tk.END, "")  # Espacio entre bloques
