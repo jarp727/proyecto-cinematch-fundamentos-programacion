@@ -32,6 +32,8 @@ indices = pd.Series(movies.index, index=movies['title'].str.lower()).drop_duplic
 
 # 🎯 Función de recomendación con calificación
 def get_recommendations(title):
+    idx = indices.get(title.lower())
+    
 
 # Buscar coincidencias parciales
 def buscar():
