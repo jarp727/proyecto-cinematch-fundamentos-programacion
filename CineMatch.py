@@ -35,6 +35,7 @@ def get_recommendations(title):
     idx = indices.get(title.lower())
     if idx is None:
         return []
+    sim_scores = list(enumerate(cosine_sim[idx]))
         
     
 
