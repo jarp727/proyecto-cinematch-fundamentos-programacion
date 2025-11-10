@@ -40,9 +40,7 @@ la arquitectura del programa se basa en la programacion modular, se usaron las f
 
 •	Interfaz (si aplica): descripción o imagen de la interfaz gráfica o consola:
 7. Desarrollo
-•	Explicación paso a paso de cómo se desarrolló el proyecto
-•	Fragmentos de código relevantes comentados
-•	Descripción de las funciones principales
+•	Ahora, abrir el editor de código favorito y crear el archivo extractor_dANE.py. Se construirá por partes. Nota: El script completo está en el archivo extractor_dane.py que se proporciona, esta es la explicación de cómo se construye.
 8. Pruebas y Resultados
 •	Cómo se probó el programa
 •	Capturas de pantalla o ejemplos de ejecución
