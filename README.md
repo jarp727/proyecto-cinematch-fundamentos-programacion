@@ -41,6 +41,18 @@ la arquitectura del programa se basa en la programacion modular, se usaron las f
 •	Interfaz (si aplica): descripción o imagen de la interfaz gráfica o consola:
 7. Desarrollo
 •	Ahora, abrir el editor de código favorito y crear el archivo extractor_dANE.py. Se construirá por partes. Nota: El script completo está en el archivo extractor_dane.py que se proporciona, esta es la explicación de cómo se construye.
+Paso 1: Importar las Librerías
+Al inicio del script, se declaran todas las herramientas que se van a utilizar.
+import pandas as pd             # Para leer el archivo CSV
+import requests                 # Para hacer peticiones HTTP (visitar las URLs)
+import re                       # Para expresiones regulares (ayuda a filtrar)
+from bs4 import BeautifulSoup   # Para parsear el HTML y encontrar enlaces
+from pathlib import Path        # Para crear carpetas y manejar rutas de archivos
+from urllib.parse import urljoin, urlparse # Para construir URLs completas y analizar enlaces
+import os                       # Para operaciones del sistema (complemento de pathlib)
+import time                     # Para añadir pequeñas pausas
+
+
 8. Pruebas y Resultados
 •	Cómo se probó el programa
 •	Capturas de pantalla o ejemplos de ejecución
