@@ -52,6 +52,24 @@ from urllib.parse import urljoin, urlparse # Para construir URLs completas y ana
 import os                       # Para operaciones del sistema (complemento de pathlib)
 import time                     # Para añadir pequeñas pausas
 
+Paso 2: Configuración Inicial y Constantes
+Se definen las variables principales que usará el script, como los nombres de los archivos y la carpeta de salida.
+# --- Configuración Inicial ---
+# Nombre del archivo que contiene las URLs a procesar
+ARCHIVO_FUENTES = "fuentes_dane.csv"
+
+# Nombre de la carpeta principal donde se guardarán todas las descargas
+CARPETA_DESCARGA_BASE = "descargas_DANE"
+
+# Cabeceras (Headers) para simular un navegador
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+}
+
+# Crear la carpeta de descarga base si no existe
+Path(CARPETA_DESCARGA_BASE).mkdir(exist_ok=True)
+
+
 
 8. Pruebas y Resultados
 •	Cómo se probó el programa
