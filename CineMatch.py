@@ -56,23 +56,107 @@ def buscar():
         recomendaciones = get_recommendations(titulo)
         if recomendaciones:
             for peli, score in recomendaciones:
-                resultado.insert(tk.END, f"  - {peli} (⭐ {score:.1f})")
+                resultado.insert(tk.END, f"  🍿 {peli} (⭐ {score:.1f})")
         else:
             resultado.insert(tk.END, "  No se encontraron recomendaciones.")
         resultado.insert(tk.END, "")  # Espacio entre bloques
         
-# 🪟 Crear ventana
+#  Crear ventana
 ventana = tk.Tk()
-ventana.title("🎬 CineMatch")
-ventana.geometry("600x500")
+ventana.title("🔗🎦 CineMatch: Tu recomendador de películas")
+ventana.attributes('-fullscreen', True)
+ventana.configure(bg="#1c1c1c")
 
-tk.Label(ventana, text="Digita el nombre de una película:", font=("Arial", 12)).pack(pady=10)
-entrada = tk.Entry(ventana, width=50)
-entrada.pack()
+# Función para actualizar visibilidad de botones
+def actualizar_botones():
+    if ventana.attributes('-fullscreen'):
+        boton_salir.pack(pady=5)
+        boton_volver.pack_forget()
+    else:
+        boton_salir.pack_forget()
+        boton_volver.pack(pady=5)
 
-tk.Button(ventana, text="Buscar peliculas similares", command=buscar).pack(pady=10)
+# Funciones para cambiar modo
+def salir_pantalla_completa():
+    ventana.attributes('-fullscreen', False)
+    actualizar_botones()
 
-resultado = tk.Listbox(ventana, width=70, height=20)
+def volver_a_pantalla_completa():
+    ventana.attributes('-fullscreen', True)
+    actualizar_botones()
+
+# Permitir salir con tecla Escape
+ventana.bind("<Escape>", lambda e: salir_pantalla_completa())
+
+# Encabezado decorado
+tk.Label(
+    ventana,
+    text="🔗🎦 Bienvenido a CineMatch 🔗🎦",
+    font=("Arial", 16, "bold"),
+    fg="white",
+    bg="#1c1c1c"
+).pack(pady=10)
+
+# Subtítulo
+tk.Label(
+    ventana,
+    text="Escribe el nombre de una película para recibir recomendaciones:",
+    font=("Arial", 12),
+    fg="white",
+    bg="#1c1c1c"
+).pack(pady=5)
+
+# Entrada de texto
+entrada = tk.Entry(ventana, width=50, font=("Arial", 11))
+entrada.pack(pady=5)
+
+# Botón de búsqueda estilizado
+tk.Button(
+    ventana,
+    text="🎦 Buscar películas similares 🎦",
+    command=buscar,
+    font=("Arial", 11, "bold"),
+    bg="#ff4444",
+    fg="white",
+    activebackground="#ff6666"
+).pack(pady=10)
+
+# Lista de resultados con estilo
+resultado = tk.Listbox(
+    ventana,
+    width=80,
+    height=20,
+    font=("Arial", 10),
+    bg="#2c2c2c",
+    fg="white",
+    selectbackground="#444444"
+)
 resultado.pack(pady=10)
 
+# Botón para salir de pantalla completa
+boton_salir = tk.Button(
+    ventana,
+    text="🔚 Salir de pantalla completa",
+    command=salir_pantalla_completa,
+    font=("Arial", 10, "bold"),
+    bg="#444444",
+    fg="white",
+    activebackground="#666666"
+)
+
+# Botón para volver a pantalla completa
+boton_volver = tk.Button(
+    ventana,
+    text=" Volver a pantalla completa",
+    command=volver_a_pantalla_completa,
+    font=("Arial", 10, "bold"),
+    bg="#444444",
+    fg="white",
+    activebackground="#666666"
+)
+
+
+actualizar_botones()
+
 ventana.mainloop()
+
