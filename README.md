@@ -40,34 +40,9 @@ la arquitectura del programa se basa en la programacion modular, se usaron las f
 
 •	Interfaz (si aplica): descripción o imagen de la interfaz gráfica o consola:
 7. Desarrollo
-•	Ahora, abrir el editor de código favorito y crear el archivo extractor_dANE.py. Se construirá por partes. Nota: El script completo está en el archivo extractor_dane.py que se proporciona, esta es la explicación de cómo se construye.
-Paso 1: Importar las Librerías
-Al inicio del script, se declaran todas las herramientas que se van a utilizar.
-import pandas as pd             # Para leer el archivo CSV
-import requests                 # Para hacer peticiones HTTP (visitar las URLs)
-import re                       # Para expresiones regulares (ayuda a filtrar)
-from bs4 import BeautifulSoup   # Para parsear el HTML y encontrar enlaces
-from pathlib import Path        # Para crear carpetas y manejar rutas de archivos
-from urllib.parse import urljoin, urlparse # Para construir URLs completas y analizar enlaces
-import os                       # Para operaciones del sistema (complemento de pathlib)
-import time                     # Para añadir pequeñas pausas
+	Explicación paso a paso de cómo se desarrolló el proyecto
+El primer paso fue seleccionar el proyecto atravez de la pagina: Más de 60 proyectos Python para todos los niveles de experiencia | DataCamp de la cual seleccionamos el proyecto que trata sobre un sistema de recomendación de películas. A partir de ahí empezamos a buscar que necesitábamos para nuestro proyecto, y la primera gran necesidad que tuvimos fue encontrar una base de datos para tener que películas recomendar y su puntaje (y futuramente recomendar películas en base a su reparto), una vez encontrada la base de datos nombrada en el link siendo esta (movies_metadata.csv) buscamos como interactuar con esta. y gracias a las librerías: pandas, os y ast logramos hacer el programa capaz de encontrar el archivo .csv leerlo y interpretarlo y así al interpretar la base de datos como un vector porfin podemos empezar a buscar similitudes de las películas a partir de su resumen o ‘overview’ encontrando palabras importantes y iguales como ‘superheroes’ o ‘romance’  y al encontrar estas palabras comparamos la calificación de las películas con similitudes encontradas y seleccionamos las 5 con puntuación mas alta. Y así ya con el procedimiento claro empezamos a buscar como podíamos generar una interfaz a nuestro proyecto para que no solo corriera en la terminal y así dimos con la biblioteca tkinter 
 
-Paso 2: Configuración Inicial y Constantes
-Se definen las variables principales que usará el script, como los nombres de los archivos y la carpeta de salida.
-# --- Configuración Inicial ---
-# Nombre del archivo que contiene las URLs a procesar
-ARCHIVO_FUENTES = "fuentes_dane.csv"
-
-# Nombre de la carpeta principal donde se guardarán todas las descargas
-CARPETA_DESCARGA_BASE = "descargas_DANE"
-
-# Cabeceras (Headers) para simular un navegador
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-}
-
-# Crear la carpeta de descarga base si no existe
-Path(CARPETA_DESCARGA_BASE).mkdir(exist_ok=True)
 
 
 
